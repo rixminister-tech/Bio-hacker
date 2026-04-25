@@ -1,0 +1,20 @@
+{
+  "name": "Zion Bio-Hacker",
+  "short_name": "Zion",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#18181b",
+  "theme_color": "#18181b",
+  "icons": [
+    {
+      "src": "https://api.aistud.io/favicon.ico",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://api.aistud.io/favicon.ico",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

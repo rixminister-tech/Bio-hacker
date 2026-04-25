@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Custom Themes */
+.theme-neon-noir {
+  --color-zinc-50: var(--color-slate-50);
+  --color-zinc-100: var(--color-slate-100);
+  --color-zinc-200: var(--color-slate-200);
+  --color-zinc-300: var(--color-slate-300);
+  --color-zinc-400: var(--color-slate-400);
+  --color-zinc-500: var(--color-slate-500);
+  --color-zinc-600: var(--color-slate-600);
+  --color-zinc-700: var(--color-slate-700);
+  --color-zinc-800: var(--color-slate-800);
+  --color-zinc-900: var(--color-slate-900);
+  --color-zinc-950: var(--color-slate-950);
+
+  --color-emerald-50: var(--color-fuchsia-50);
+  --color-emerald-100: var(--color-fuchsia-100);
+  --color-emerald-200: var(--color-fuchsia-200);
+  --color-emerald-300: var(--color-fuchsia-300);
+  --color-emerald-400: var(--color-fuchsia-400);
+  --color-emerald-500: var(--color-fuchsia-500);
+  --color-emerald-600: var(--color-fuchsia-600);
+  --color-emerald-700: var(--color-fuchsia-700);
+  --color-emerald-800: var(--color-fuchsia-800);
+  --color-emerald-900: var(--color-fuchsia-900);
+  --color-emerald-950: var(--color-fuchsia-950);
+}
+
+.theme-cyberpunk {
+  --color-zinc-50: var(--color-stone-50);
+  --color-zinc-100: var(--color-stone-100);
+  --color-zinc-200: var(--color-stone-200);
+  --color-zinc-300: var(--color-stone-300);
+  --color-zinc-400: var(--color-stone-400);
+  --color-zinc-500: var(--color-stone-500);
+  --color-zinc-600: var(--color-stone-600);
+  --color-zinc-700: var(--color-stone-700);
+  --color-zinc-800: var(--color-stone-800);
+  --color-zinc-900: var(--color-stone-900);
+  --color-zinc-950: var(--color-stone-950);
+
+  --color-emerald-50: var(--color-cyan-50);
+  --color-emerald-100: var(--color-cyan-100);
+  --color-emerald-200: var(--color-cyan-200);
+  --color-emerald-300: var(--color-cyan-300);
+  --color-emerald-400: var(--color-cyan-400);
+  --color-emerald-500: var(--color-cyan-500);
+  --color-emerald-600: var(--color-cyan-600);
+  --color-emerald-700: var(--color-cyan-700);
+  --color-emerald-800: var(--color-cyan-800);
+  --color-emerald-900: var(--color-cyan-900);
+  --color-emerald-950: var(--color-cyan-950);
+}
+
+.theme-minimalista {
+  --color-zinc-50: var(--color-neutral-50);
+  --color-zinc-100: var(--color-neutral-100);
+  --color-zinc-200: var(--color-neutral-200);
+  --color-zinc-300: var(--color-neutral-300);
+  --color-zinc-400: var(--color-neutral-400);
+  --color-zinc-500: var(--color-neutral-500);
+  --color-zinc-600: var(--color-neutral-600);
+  --color-zinc-700: var(--color-neutral-700);
+  --color-zinc-800: var(--color-neutral-800);
+  --color-zinc-900: var(--color-neutral-900);
+  --color-zinc-950: var(--color-neutral-950);
+
+  --color-emerald-50: var(--color-neutral-50);
+  --color-emerald-100: var(--color-neutral-100);
+  --color-emerald-200: var(--color-neutral-200);
+  --color-emerald-300: var(--color-neutral-300);
+  --color-emerald-400: var(--color-neutral-400);
+  --color-emerald-500: var(--color-neutral-500);
+  --color-emerald-600: var(--color-neutral-600);
+  --color-emerald-700: var(--color-neutral-700);
+  --color-emerald-800: var(--color-neutral-800);
+  --color-emerald-900: var(--color-neutral-900);
+  --color-emerald-950: var(--color-neutral-950);
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #d4d4d8; /* zinc-300 */
+    border-radius: 20px;
+  }
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #3f3f46; /* zinc-700 */
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #a1a1aa; /* zinc-400 */
+  }
+  .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #52525b; /* zinc-600 */
+  }
+}
+
+/* Basic prose styles for markdown */
+.markdown-body h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  color: #18181b;
+}
+.dark .markdown-body h1 { color: #f4f4f5; }
+
+.markdown-body h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #18181b;
+  border-bottom: 1px solid #e4e4e7;
+  padding-bottom: 0.25rem;
+}
+.dark .markdown-body h2 { color: #f4f4f5; border-bottom-color: #27272a; }
+
+.markdown-body h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #27272a;
+}
+.dark .markdown-body h3 { color: #e4e4e7; }
+
+.markdown-body p {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  color: #3f3f46;
+}
+.dark .markdown-body p { color: #d4d4d8; }
+
+.markdown-body ul, .markdown-body ol {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #3f3f46;
+}
+.dark .markdown-body ul, .dark .markdown-body ol { color: #d4d4d8; }
+
+.markdown-body ul { list-style-type: disc; }
+.markdown-body ol { list-style-type: decimal; }
+
+.markdown-body li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+  color: #18181b;
+}
+.dark .markdown-body strong { color: #f4f4f5; }
+
+.markdown-body em { font-style: italic; }
+
+.markdown-body blockquote {
+  border-left: 4px solid #10b981;
+  padding-left: 1rem;
+  color: #52525b;
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.dark .markdown-body blockquote { color: #a1a1aa; border-left-color: #34d399; }
+
+/* Print Styles for E-book */
+@media print {
+  @page { margin: 2cm; }
+  body { background-color: white !important; color: black !important; }
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  .markdown-body h1, .markdown-body h2, .markdown-body h3, 
+  .markdown-body strong, .markdown-body p, .markdown-body li, 
+  .markdown-body blockquote { color: black !important; }
+  .markdown-body h2 { border-bottom: 1px solid #ccc; page-break-after: avoid; }
+  .markdown-body h1 { page-break-before: always; }
+  .markdown-body h1:first-child { page-break-before: avoid; }
+  .ebook-page { page-break-inside: avoid; margin-bottom: 2rem; }
+}
